@@ -1,8 +1,12 @@
 services:
-  weather-service:
-    image: examples/web
-
-  clothing-service:
+  weather:
+    build: ./services/weather
     ports:
-      - "8000:8000"
-    image: python:3.11
+      - "3000:3000"
+
+  clothing:
+    build: ./services/clothing
+    ports:
+      - "3001:3001"
+    environment:
+      - WEATHER_SERVICE_URL=http://weather:3000

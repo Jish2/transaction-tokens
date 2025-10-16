@@ -1,13 +1,16 @@
 import { Hono } from "hono";
 import { City, WeatherResponse } from "./types";
-
-const app = new Hono();
+import { logger } from "hono/logger";
 
 const data: Record<City, WeatherResponse["temperature"]> = {
   "New York": 70,
   "Los Angeles": 75,
   Chicago: 65,
 };
+
+const app = new Hono();
+
+app.use("*", logger());
 
 app.get("/weather/:city", (c) => {
   const city = c.req.param("city") as City;
@@ -17,7 +20,6 @@ app.get("/weather/:city", (c) => {
   }
 
   const temperature = data[city];
-
   return c.json({ city, temperature });
 });
 

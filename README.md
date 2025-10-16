@@ -17,6 +17,15 @@ in this example, i created two services that interact with each other:
 the clothing service will be publicly accessible, however the weather service
 is meant to only be internally called (for now, by only the clothing service).
 
+## walkthrough
+
+### creating the services [`p1`](https://github.com/Jish2/transaction-tokens/tree/p1)
+
+### creating the internal network [`p2`](https://github.com/Jish2/transaction-tokens/tree/p2)
+
+### intruding the weather service [`p3`](https://github.com/Jish2/transaction-tokens/tree/p3)
+
+### implementing transaction tokens [`p4`](https://github.com/Jish2/transaction-tokens/tree/p4)
 
 [^1]: [Tranaction Tokens Draft 00](https://www.ietf.org/archive/id/draft-ietf-oauth-transaction-tokens-00.html)
 [^2]: [What Are Transaction Tokens? Comparing Them to Phantom Tokens](https://curity.io/blog/transaction-tokens-new-phantom-tokens/)

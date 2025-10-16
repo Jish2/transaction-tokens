@@ -21,7 +21,63 @@ is meant to only be internally called (for now, by only the clothing service).
 
 ### creating the services [`p1`](https://github.com/Jish2/transaction-tokens/tree/p1)
 
+#### weather service
+
 for the purposes of this example, the weather service will only support three cities and will use a static dataset.
+
+ill implement the `/weather/:city` endpoint, which will return the temperature for a given city.
+
+```
+GET /weather/Chicago
+{
+    "city": "Chicago",
+    "temperature": 65
+}
+```
+
+#### clothing service
+
+for the clothing service, ill implement the `/outfit/:city` endpoint, which will return the outfit for a given city.
+
+```
+GET /outfit/Chicago
+{
+    "outfit": "heavy coat"
+}
+```
+
+#### test it
+
+checkout the [`p1`](https://github.com/Jish2/transaction-tokens/tree/p1) branch to see the code for this step.
+
+```
+$ git checkout p1
+```
+
+then, start the services
+
+```
+$ docker compose up
+```
+
+then, you can test the services by making requests to the clothing service.
+
+```
+$ curl http://localhost:3001/healthz
+{"status":"ok"}
+```
+
+```
+$ curl http://localhost:3000/healthz
+{"status":"ok"}
+```
+
+```
+$ curl http://localhost:3001/outfit/Chicago
+{"outfit":"light jacket"}
+```
+
+as you can see, both services are publicly accessible, but everything is working as expected.
 
 ### creating the internal network [`p2`](https://github.com/Jish2/transaction-tokens/tree/p2)
 

@@ -21,6 +21,8 @@ is meant to only be internally called (for now, by only the clothing service).
 
 ### creating the services [`p1`](https://github.com/Jish2/transaction-tokens/tree/p1)
 
+for the purposes of this example, the weather service will only support three cities and will use a static dataset.
+
 ### creating the internal network [`p2`](https://github.com/Jish2/transaction-tokens/tree/p2)
 
 ### intruding the weather service [`p3`](https://github.com/Jish2/transaction-tokens/tree/p3)

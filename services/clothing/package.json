@@ -1,0 +1,12 @@
+{
+  "name": "clothing",
+  "scripts": {
+    "dev": "bun run --hot index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.9.12"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
